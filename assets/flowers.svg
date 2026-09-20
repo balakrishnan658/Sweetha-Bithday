@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" fill="none">
+  <defs>
+    <!-- Filter for subtle shadow -->
+    <filter id="flowerShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#87CEEB" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- White Petal Gradient -->
+    <linearGradient id="whitePetal" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E8F6FC"/>
+      <stop offset="70%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Sky Blue Petal Gradient -->
+    <linearGradient id="skyPetal" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6DBDE0"/>
+      <stop offset="60%" stop-color="#A5DCF2"/>
+      <stop offset="100%" stop-color="#E0F5FD"/>
+    </linearGradient>
+
+    <!-- Soft Blue Core -->
+    <radialGradient id="centerCore" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#BFE8F7"/>
+      <stop offset="100%" stop-color="#87CEEB"/>
+    </radialGradient>
+  </defs>
+
+  <g filter="url(#flowerShadow)">
+    <!-- Stems (Soft Sage Blue) -->
+    <path d="M160 330 Q160 270 160 210" stroke="#9EBFCD" stroke-width="3" stroke-linecap="round"/>
+    <path d="M160 300 Q145 250 110 200" stroke="#A8C9D6" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M160 290 Q180 250 215 195" stroke="#A8C9D6" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M155 260 Q130 220 90 165" stroke="#B8D7E3" stroke-width="2" stroke-linecap="round"/>
+    <path d="M165 255 Q195 215 235 155" stroke="#B8D7E3" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Delicate Eucalyptus / Blue-tinted Leaves -->
+    <ellipse cx="132" cy="245" rx="14" ry="7" transform="rotate(-35 132 245)" fill="#D4ECF6" stroke="#9EBFCD" stroke-width="1"/>
+    <ellipse cx="188" cy="240" rx="14" ry="7" transform="rotate(35 188 240)" fill="#D4ECF6" stroke="#9EBFCD" stroke-width="1"/>
+    <ellipse cx="145" cy="275" rx="12" ry="6" transform="rotate(-25 145 275)" fill="#D4ECF6" stroke="#9EBFCD" stroke-width="1"/>
+
+    <!-- Baby's Breath Elements (Small White & Soft Blue Dots on Sprigs) -->
+    <!-- Left Sprig Dots -->
+    <circle cx="85" cy="155" r="4.5" fill="#FFFFFF" stroke="#CCEAF5" stroke-width="1"/>
+    <circle cx="75" cy="168" r="4" fill="#E8F6FC"/>
+    <circle cx="98" cy="152" r="3.5" fill="#BFE8F7"/>
+    <circle cx="92" cy="172" r="3.5" fill="#FFFFFF" stroke="#CCEAF5" stroke-width="0.8"/>
+    <circle cx="68" cy="180" r="3" fill="#D4F0FA"/>
+
+    <!-- Right Sprig Dots -->
+    <circle cx="240" cy="148" r="4.5" fill="#FFFFFF" stroke="#CCEAF5" stroke-width="1"/>
+    <circle cx="252" cy="160" r="4" fill="#E8F6FC"/>
+    <circle cx="230" cy="142" r="3.5" fill="#BFE8F7"/>
+    <circle cx="232" cy="165" r="3.5" fill="#FFFFFF" stroke="#CCEAF5" stroke-width="0.8"/>
+    <circle cx="258" cy="172" r="3" fill="#D4F0FA"/>
+
+    <!-- Top Sprig Dots -->
+    <circle cx="145" cy="85" r="4" fill="#FFFFFF" stroke="#CCEAF5" stroke-width="1"/>
+    <circle cx="160" cy="75" r="4.5" fill="#E3F4FB"/>
+    <circle cx="175" cy="88" r="3.5" fill="#BFE8F7"/>
+
+    <!-- LEFT FLOWER: Soft Sky Blue Blossom -->
+    <g transform="translate(108, 185)">
+      <!-- 5 Petals -->
+      <path d="M0 0 C-12 -25 12 -25 0 0" fill="url(#skyPetal)" transform="rotate(0)"/>
+      <path d="M0 0 C-12 -25 12 -25 0 0" fill="url(#skyPetal)" transform="rotate(72)"/>
+      <path d="M0 0 C-12 -25 12 -25 0 0" fill="url(#skyPetal)" transform="rotate(144)"/>
+      <path d="M0 0 C-12 -25 12 -25 0 0" fill="url(#skyPetal)" transform="rotate(216)"/>
+      <path d="M0 0 C-12 -25 12 -25 0 0" fill="url(#skyPetal)" transform="rotate(288)"/>
+      <!-- Flower Center -->
+      <circle cx="0" cy="0" r="7" fill="url(#centerCore)"/>
+      <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- RIGHT FLOWER: Pure White Blossom with Soft Blue Tips -->
+    <g transform="translate(215, 180)">
+      <path d="M0 0 C-14 -28 14 -28 0 0" fill="url(#whitePetal)" stroke="#CCE9F6" stroke-width="0.8" transform="rotate(18)"/>
+      <path d="M0 0 C-14 -28 14 -28 0 0" fill="url(#whitePetal)" stroke="#CCE9F6" stroke-width="0.8" transform="rotate(90)"/>
+      <path d="M0 0 C-14 -28 14 -28 0 0" fill="url(#whitePetal)" stroke="#CCE9F6" stroke-width="0.8" transform="rotate(162)"/>
+      <path d="M0 0 C-14 -28 14 -28 0 0" fill="url(#whitePetal)" stroke="#CCE9F6" stroke-width="0.8" transform="rotate(234)"/>
+      <path d="M0 0 C-14 -28 14 -28 0 0" fill="url(#whitePetal)" stroke="#CCE9F6" stroke-width="0.8" transform="rotate(306)"/>
+      <!-- Flower Center -->
+      <circle cx="0" cy="0" r="7.5" fill="url(#centerCore)"/>
+      <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- CENTER MAIN FLOWER: Large Elegant Rose / Peony in White & Soft Blue Accents -->
+    <g transform="translate(160, 145)">
+      <!-- Outer Petals -->
+      <ellipse cx="0" cy="-24" rx="18" ry="20" fill="url(#whitePetal)" stroke="#D8EEF6" stroke-width="1"/>
+      <ellipse cx="22" cy="-10" rx="18" ry="19" transform="rotate(45 22 -10)" fill="url(#whitePetal)" stroke="#D8EEF6" stroke-width="1"/>
+      <ellipse cx="20" cy="16" rx="18" ry="18" transform="rotate(100 20 16)" fill="url(#whitePetal)" stroke="#D8EEF6" stroke-width="1"/>
+      <ellipse cx="-12" cy="22" rx="18" ry="18" transform="rotate(170 -12 22)" fill="url(#whitePetal)" stroke="#D8EEF6" stroke-width="1"/>
+      <ellipse cx="-24" cy="-5" rx="18" ry="18" transform="rotate(-65 -24 -5)" fill="url(#whitePetal)" stroke="#D8EEF6" stroke-width="1"/>
+
+      <!-- Inner Layer Petals (Soft Sky Blue hue) -->
+      <ellipse cx="0" cy="-12" rx="13" ry="14" fill="#EDF7FC" stroke="#C3E5F3" stroke-width="0.8"/>
+      <ellipse cx="12" cy="2" rx="13" ry="13" fill="#E6F5FB" stroke="#C3E5F3" stroke-width="0.8"/>
+      <ellipse cx="-10" cy="6" rx="13" ry="13" fill="#E6F5FB" stroke="#C3E5F3" stroke-width="0.8"/>
+
+      <!-- Center Rosette Core -->
+      <circle cx="0" cy="0" r="10" fill="url(#centerCore)"/>
+      <path d="M-5 -2 C-3 -7 3 -7 5 -2 C6 4 -6 4 -5 -2 Z" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+
+    <!-- Floating Sparkle Accents -->
+    <path d="M90 100 Q90 105 86 106 Q90 107 90 112 Q90 107 94 106 Q90 105 90 100 Z" fill="#87CEEB" opacity="0.85"/>
+    <path d="M225 90 Q225 95 221 96 Q225 97 225 102 Q225 97 229 96 Q225 95 225 90 Z" fill="#87CEEB" opacity="0.85"/>
+    <circle cx="160" cy="50" r="2.5" fill="#87CEEB" opacity="0.7"/>
+    <circle cx="270" cy="210" r="3" fill="#BFE8F7" opacity="0.8"/>
+  </g>
+</svg>

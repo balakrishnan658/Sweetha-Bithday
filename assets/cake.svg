@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" fill="none">
+  <defs>
+    <!-- Cake Plate Gradient -->
+    <linearGradient id="plateGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2F2FA"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D0E8F6"/>
+    </linearGradient>
+
+    <!-- Lower Cake Tier Gradient -->
+    <linearGradient id="cakeBottomGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCFDFF"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDF7FC"/>
+    </linearGradient>
+
+    <!-- Upper Cake Tier Gradient -->
+    <linearGradient id="cakeTopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F2FAFD"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E3F4FC"/>
+    </linearGradient>
+
+    <!-- Sky Blue Frosting -->
+    <linearGradient id="frostingSky" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9ADAF0"/>
+      <stop offset="50%" stop-color="#BEE7F7"/>
+      <stop offset="100%" stop-color="#87CEEB"/>
+    </linearGradient>
+
+    <!-- Candle Flame Radial Gradient -->
+    <radialGradient id="flameInner" cx="45%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#D4F3FE"/>
+      <stop offset="75%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#60BBE3"/>
+    </radialGradient>
+
+    <!-- Glow Filter for Candle Flame -->
+    <filter id="candleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="cakeShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#87CEEB" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#cakeShadow)">
+    <!-- Cake Stand / Base Plate -->
+    <ellipse cx="150" cy="275" rx="110" ry="18" fill="url(#plateGrad)" stroke="#CCE6F4" stroke-width="1.5"/>
+    <ellipse cx="150" cy="272" rx="100" ry="14" fill="#FFFFFF"/>
+    <!-- Pedestal Base -->
+    <path d="M135 275 L130 295 C130 298 170 298 170 295 L165 275 Z" fill="#E8F4FA"/>
+    <ellipse cx="150" cy="296" rx="28" ry="6" fill="#D3EAF6"/>
+
+    <!-- BOTTOM TIER -->
+    <!-- Cake cylinder -->
+    <path d="M65 205 C65 220 100 232 150 232 C200 232 235 220 235 205 L235 250 C235 265 200 274 150 274 C100 274 65 265 65 250 Z" fill="url(#cakeBottomGrad)" stroke="#D8EEF6" stroke-width="1.5"/>
+    <!-- Bottom tier top surface -->
+    <ellipse cx="150" cy="205" rx="85" ry="24" fill="#F4FAFD" stroke="#D8EEF6" stroke-width="1.5"/>
+
+    <!-- Bottom Tier Frosting Drips & Scallops -->
+    <path d="M65 205
+             C70 220 80 224 90 208
+             C100 226 112 225 120 207
+             C130 228 142 227 150 206
+             C160 227 172 226 182 208
+             C192 225 205 224 215 207
+             C225 222 232 216 235 205
+             L235 202 C200 222 100 222 65 202 Z" fill="url(#frostingSky)"/>
+
+    <!-- Delicate pearls on bottom tier -->
+    <circle cx="95" cy="245" r="3.5" fill="#BFE8F7"/>
+    <circle cx="122" cy="252" r="3.5" fill="#87CEEB"/>
+    <circle cx="150" cy="255" r="4" fill="#BFE8F7"/>
+    <circle cx="178" cy="252" r="3.5" fill="#87CEEB"/>
+    <circle cx="205" cy="245" r="3.5" fill="#BFE8F7"/>
+
+    <!-- TOP TIER -->
+    <!-- Top cylinder -->
+    <path d="M90 145 C90 158 116 168 150 168 C184 168 210 158 210 145 L210 185 C210 198 184 206 150 206 C116 206 90 198 90 185 Z" fill="url(#cakeTopGrad)" stroke="#D8EEF6" stroke-width="1.5"/>
+    <!-- Top tier top surface -->
+    <ellipse cx="150" cy="145" rx="60" ry="18" fill="#FFFFFF" stroke="#D8EEF6" stroke-width="1.5"/>
+
+    <!-- Top Tier Frosting Drips -->
+    <path d="M90 145
+             C96 158 106 162 114 148
+             C124 165 135 163 142 147
+             C150 166 162 164 170 147
+             C178 163 190 161 198 148
+             C204 157 208 153 210 145
+             L210 143 C185 158 115 158 90 143 Z" fill="url(#frostingSky)"/>
+
+    <!-- Piped Cream Rosettes around top -->
+    <g fill="#FFFFFF" stroke="#D6EDF7" stroke-width="1">
+      <ellipse cx="98" cy="144" rx="7" ry="5"/>
+      <ellipse cx="118" cy="151" rx="7" ry="5"/>
+      <ellipse cx="140" cy="154" rx="7" ry="5"/>
+      <ellipse cx="160" cy="154" rx="7" ry="5"/>
+      <ellipse cx="182" cy="151" rx="7" ry="5"/>
+      <ellipse cx="202" cy="144" rx="7" ry="5"/>
+    </g>
+    <!-- Soft blue dots on rosettes -->
+    <circle cx="98" cy="143" r="2" fill="#87CEEB"/>
+    <circle cx="118" cy="150" r="2" fill="#87CEEB"/>
+    <circle cx="140" cy="153" r="2" fill="#87CEEB"/>
+    <circle cx="160" cy="153" r="2" fill="#87CEEB"/>
+    <circle cx="182" cy="150" r="2" fill="#87CEEB"/>
+    <circle cx="202" cy="143" r="2" fill="#87CEEB"/>
+
+    <!-- CANDLE -->
+    <!-- Candle stick -->
+    <rect x="146" y="90" width="8" height="38" rx="4" fill="#FFFFFF" stroke="#BFE8F7" stroke-width="1.2"/>
+    <!-- Diagonal sky-blue spiral stripes on candle -->
+    <path d="M146 100 L154 96 M146 110 L154 106 M146 120 L154 116" stroke="#87CEEB" stroke-width="2" stroke-linecap="round"/>
+    <!-- Candle wick -->
+    <line x1="150" y1="90" x2="150" y2="82" stroke="#5A7D94" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Candle Glow (outer soft blue aura) -->
+    <circle cx="150" cy="70" r="22" fill="#E0F5FD" opacity="0.6" filter="url(#candleGlow)"/>
+
+    <!-- Candle Flame Shape -->
+    <g class="candle-flame-group">
+      <!-- Outer Flame -->
+      <path d="M150 56 C143 66 142 74 146 79 C148 82 152 82 154 79 C158 74 157 66 150 56 Z" fill="url(#flameInner)" filter="url(#candleGlow)"/>
+      <!-- Inner Bright White Core -->
+      <ellipse cx="150" cy="74" rx="3.5" ry="6" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Little Sparkle accents around candle -->
+    <path d="M125 72 Q125 77 121 78 Q125 79 125 84 Q125 79 129 78 Q125 77 125 72 Z" fill="#87CEEB" opacity="0.8"/>
+    <path d="M174 65 Q174 70 170 71 Q174 72 174 77 Q174 72 178 71 Q174 70 174 65 Z" fill="#87CEEB" opacity="0.8"/>
+  </g>
+</svg>

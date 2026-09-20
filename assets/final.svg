@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
+  <defs>
+    <filter id="boxShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#87CEEB" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F2FAFD"/>
+    </linearGradient>
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6EBEE0"/>
+      <stop offset="50%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#5EAED2"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#boxShadow)">
+    <!-- Lower Box Body -->
+    <rect x="65" y="130" width="150" height="110" rx="10" fill="url(#boxGrad)" stroke="#D8EEF6" stroke-width="2"/>
+
+    <!-- Vertical Ribbon on Body -->
+    <rect x="127" y="130" width="26" height="110" fill="url(#ribbonGrad)"/>
+    <line x1="127" y1="130" x2="127" y2="240" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="153" y1="130" x2="153" y2="240" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <!-- Box Lid -->
+    <rect x="55" y="105" width="170" height="32" rx="7" fill="#FFFFFF" stroke="#D0ECF7" stroke-width="2"/>
+    <!-- Vertical Ribbon on Lid -->
+    <rect x="127" y="105" width="26" height="32" fill="url(#ribbonGrad)"/>
+
+    <!-- Ribbon Bow on Top -->
+    <!-- Left Loop -->
+    <path d="M140 105 C120 70 80 80 115 105 Z" fill="#87CEEB" stroke="#68BBDD" stroke-width="1.2"/>
+    <path d="M136 102 C122 78 92 84 116 102 Z" fill="#BFE8F7"/>
+
+    <!-- Right Loop -->
+    <path d="M140 105 C160 70 200 80 165 105 Z" fill="#87CEEB" stroke="#68BBDD" stroke-width="1.2"/>
+    <path d="M144 102 C158 78 188 84 164 102 Z" fill="#BFE8F7"/>
+
+    <!-- Center Knot -->
+    <circle cx="140" cy="105" r="9" fill="#5AA8CB"/>
+    <circle cx="140" cy="104" r="5" fill="#FFFFFF" opacity="0.6"/>
+
+    <!-- Floating Confetti & Stars -->
+    <circle cx="45" cy="85" r="4" fill="#87CEEB"/>
+    <circle cx="230" cy="95" r="3.5" fill="#BFE8F7"/>
+    <circle cx="50" cy="170" r="3" fill="#D2F0FA"/>
+    <circle cx="235" cy="165" r="4" fill="#87CEEB"/>
+    <path d="M140 30 Q140 38 133 40 Q140 42 140 50 Q140 42 147 40 Q140 38 140 30 Z" fill="#87CEEB"/>
+    <path d="M75 55 Q75 61 70 62 Q75 63 75 69 Q75 63 80 62 Q75 61 75 55 Z" fill="#BFE8F7"/>
+    <path d="M210 50 Q210 56 205 57 Q210 58 210 64 Q210 58 215 57 Q210 56 210 50 Z" fill="#BFE8F7"/>
+  </g>
+</svg>

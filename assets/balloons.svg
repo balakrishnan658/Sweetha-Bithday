@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" fill="none">
+  <defs>
+    <!-- Balloon 1 Gradient (Soft Sky Blue) -->
+    <radialGradient id="balloonBlue1" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#CBEBF7"/>
+      <stop offset="70%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#6BB9DC"/>
+    </radialGradient>
+    <!-- Balloon 2 Gradient (Powder/Pastel Blue) -->
+    <radialGradient id="balloonBlue2" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="30%" stop-color="#E2F6FC"/>
+      <stop offset="80%" stop-color="#A6DDF2"/>
+      <stop offset="100%" stop-color="#7EC8E3"/>
+    </radialGradient>
+    <!-- Balloon 3 Gradient (Pure / Pearl White) -->
+    <radialGradient id="balloonWhite" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#F4FAFD"/>
+      <stop offset="85%" stop-color="#D7EFF8"/>
+      <stop offset="100%" stop-color="#C2E5F2"/>
+    </radialGradient>
+    <!-- Shadow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#87CEEB" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softGlow)">
+    <!-- Strings -->
+    <path d="M95 190 Q120 250 150 310" stroke="#B8D7E8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M205 190 Q180 250 150 310" stroke="#B8D7E8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M150 170 Q145 240 150 310" stroke="#A2CCE0" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M125 155 Q135 230 150 310" stroke="#B8D7E8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M175 155 Q165 230 150 310" stroke="#B8D7E8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+    <!-- Ribbon Knot at bottom -->
+    <circle cx="150" cy="310" r="4.5" fill="#87CEEB"/>
+    <path d="M150 312 Q140 330 135 342" stroke="#87CEEB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M150 312 Q160 330 168 344" stroke="#87CEEB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M150 310 C140 300 130 315 148 312" fill="#A0DCF2"/>
+    <path d="M150 310 C160 300 170 315 152 312" fill="#A0DCF2"/>
+
+    <!-- Left Background Balloon (Powder Blue) -->
+    <g transform="rotate(-8 95 125)">
+      <ellipse cx="95" cy="125" rx="46" ry="58" fill="url(#balloonBlue2)"/>
+      <!-- Highlight -->
+      <ellipse cx="78" cy="100" rx="9" ry="18" transform="rotate(-20 78 100)" fill="#FFFFFF" opacity="0.65"/>
+      <!-- Knot -->
+      <polygon points="91,182 99,182 95,189" fill="#8ACEEA"/>
+    </g>
+
+    <!-- Right Background Balloon (Pearl White) -->
+    <g transform="rotate(9 205 125)">
+      <ellipse cx="205" cy="125" rx="46" ry="58" fill="url(#balloonWhite)"/>
+      <ellipse cx="190" cy="100" rx="9" ry="18" transform="rotate(-15 190 100)" fill="#FFFFFF" opacity="0.8"/>
+      <polygon points="201,182 209,182 205,189" fill="#BFE3F2"/>
+    </g>
+
+    <!-- Center Main Balloon (Primary Sky Blue) -->
+    <g>
+      <ellipse cx="150" cy="105" rx="55" ry="68" fill="url(#balloonBlue1)"/>
+      <!-- Glossy shine -->
+      <ellipse cx="130" cy="75" rx="12" ry="24" transform="rotate(-22 130 75)" fill="#FFFFFF" opacity="0.75"/>
+      <circle cx="120" cy="105" r="4.5" fill="#FFFFFF" opacity="0.6"/>
+      <!-- Knot -->
+      <polygon points="145,172 155,172 150,180" fill="#6BB9DC"/>
+    </g>
+
+    <!-- Little floating sparkle dots -->
+    <circle cx="65" cy="65" r="3" fill="#87CEEB" opacity="0.7"/>
+    <circle cx="235" cy="55" r="2.5" fill="#87CEEB" opacity="0.7"/>
+    <circle cx="225" cy="190" r="3.5" fill="#BFE8F7" opacity="0.9"/>
+    <circle cx="70" cy="180" r="2" fill="#BFE8F7" opacity="0.8"/>
+  </g>
+</svg>

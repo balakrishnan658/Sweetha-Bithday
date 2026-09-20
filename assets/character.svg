@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <filter id="charShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#87CEEB" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EFF8FC"/>
+    </linearGradient>
+    <linearGradient id="hatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5E1F7"/>
+      <stop offset="100%" stop-color="#87CEEB"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#charShadow)">
+    <!-- Cute Soft Fluffy Cloud Character -->
+    <!-- Cloud base body -->
+    <path d="M70 160
+             C50 160 38 145 42 128
+             C44 112 58 102 74 104
+             C80 84 102 70 125 72
+             C142 74 157 85 162 100
+             C176 96 194 105 198 120
+             C202 135 192 152 178 158
+             C165 163 150 160 145 160
+             Z" fill="url(#cloudGrad)" stroke="#D8EEF6" stroke-width="2"/>
+
+    <!-- Happy Eyes -->
+    <path d="M102 118 C105 112 115 112 118 118" stroke="#243447" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M142 118 C145 112 155 112 158 118" stroke="#243447" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Cute Smiling Mouth -->
+    <path d="M126 128 Q130 134 134 128" stroke="#243447" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Soft Pastel Blue / Pink Blushing Cheeks -->
+    <ellipse cx="94" cy="126" rx="7" ry="4" fill="#BFE8F7" opacity="0.9"/>
+    <ellipse cx="166" cy="126" rx="7" ry="4" fill="#BFE8F7" opacity="0.9"/>
+
+    <!-- Cute Birthday Party Hat -->
+    <g transform="rotate(12 130 65)">
+      <polygon points="120,70 140,70 130,30" fill="url(#hatGrad)" stroke="#74C3E5" stroke-width="1.2"/>
+      <!-- Hat stripes -->
+      <path d="M124 60 L136 60 M127 50 L133 50 M128 40 L132 40" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Pom-pom on top -->
+      <circle cx="130" cy="28" r="4.5" fill="#FFFFFF" stroke="#BFE8F7" stroke-width="1"/>
+      <ellipse cx="130" cy="70" rx="10" ry="2.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Sparkle next to character -->
+    <circle cx="65" cy="80" r="2.5" fill="#87CEEB"/>
+    <circle cx="195" cy="85" r="3" fill="#87CEEB"/>
+  </g>
+</svg>

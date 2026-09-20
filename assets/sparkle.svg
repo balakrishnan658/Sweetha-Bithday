@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <radialGradient id="spkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#BFE8F7"/>
+      <stop offset="100%" stop-color="#87CEEB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="url(#spkGlow)"/>
+  <path d="M50 8 C50 35 65 50 92 50 C65 50 50 65 50 92 C50 65 35 50 8 50 C35 50 50 35 50 8 Z" fill="#87CEEB"/>
+  <path d="M50 25 C50 42 58 50 75 50 C58 50 50 58 50 75 C50 58 42 50 25 50 C42 50 50 42 50 25 Z" fill="#FFFFFF"/>
+</svg>

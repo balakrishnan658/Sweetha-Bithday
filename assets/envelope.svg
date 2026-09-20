@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
+  <defs>
+    <filter id="envShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#87CEEB" flood-opacity="0.22"/>
+    </filter>
+
+    <linearGradient id="envelopeBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCFEFF"/>
+      <stop offset="100%" stop-color="#F2FAFD"/>
+    </linearGradient>
+
+    <linearGradient id="flapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EDF7FC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <linearGradient id="skyBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#BFE8F7"/>
+    </linearGradient>
+
+    <radialGradient id="sealGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#DDF5FE"/>
+      <stop offset="60%" stop-color="#96DAF2"/>
+      <stop offset="100%" stop-color="#6EBFDF"/>
+    </radialGradient>
+  </defs>
+
+  <g filter="url(#envShadow)">
+    <!-- Envelope Main Rectangle Base -->
+    <rect x="30" y="40" width="260" height="160" rx="14" fill="url(#envelopeBody)" stroke="#D6EEF7" stroke-width="1.8"/>
+
+    <!-- Subtle Inner Border -->
+    <rect x="38" y="48" width="244" height="144" rx="10" fill="none" stroke="#E3F4FC" stroke-width="1"/>
+
+    <!-- Lower Fold Triangles -->
+    <path d="M30 200 L160 120 L290 200 Z" fill="#F4FAFD" stroke="#D6EEF7" stroke-width="1.5"/>
+    <path d="M30 40 L125 125 L30 200 Z" fill="#F8FCFE" stroke="#DCEFF7" stroke-width="1.2"/>
+    <path d="M290 40 L195 125 L290 200 Z" fill="#F8FCFE" stroke="#DCEFF7" stroke-width="1.2"/>
+
+    <!-- Top Flap (folded down state) -->
+    <path d="M30 40 L160 135 L290 40 Z" fill="url(#flapGrad)" stroke="#CCE8F5" stroke-width="1.6"/>
+
+    <!-- Wax Seal / Heart Emblem in Sky Blue -->
+    <circle cx="160" cy="132" r="19" fill="url(#sealGrad)" stroke="#FFFFFF" stroke-width="2"/>
+    <!-- Heart icon inside seal -->
+    <path d="M160 138 C158 136 150 130 150 125 C150 121 153 118 157 118 C159 118 160 120 160 121 C160 120 161 118 163 118 C167 118 170 121 170 125 C170 130 162 136 160 138 Z" fill="#FFFFFF"/>
+
+    <!-- Delicate sparkles -->
+    <path d="M70 70 Q70 75 66 76 Q70 77 70 82 Q70 77 74 76 Q70 75 70 70 Z" fill="#87CEEB" opacity="0.8"/>
+    <path d="M250 80 Q250 85 246 86 Q250 87 250 92 Q250 87 254 86 Q250 85 250 80 Z" fill="#87CEEB" opacity="0.8"/>
+  </g>
+</svg>
