@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="An elegant sky-blue and white birthday surprise experience.">
+  <meta name="theme-color" content="#EAF8FC">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="A Little Surprise For You 💙">
+  <meta property="og:description" content="A special birthday surprise created just for you.">
+  <meta property="og:type" content="website">
+
+  <title>A Little Surprise 💙</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Caveat & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Atmospheric Ambient Background Elements -->
+  <div class="ambient-sky" aria-hidden="true">
+    <div class="cloud-pill cloud-1"></div>
+    <div class="cloud-pill cloud-2"></div>
+    <div class="cloud-pill cloud-3"></div>
+    <div class="sparkle-layer" id="sparkle-layer"></div>
+  </div>
+
+  <!-- Confetti Canvas (For Final Celebration & Cake Wish) -->
+  <canvas id="celebration-canvas" aria-hidden="true"></canvas>
+
+  <!-- Header Controls: Optional Audio Toggle -->
+  <header class="app-header">
+    <div class="header-left">
+      <span class="heart-badge" aria-hidden="true">☁️ 💙</span>
+    </div>
+    <div class="header-right">
+      <!-- Music toggle: safely controls music -->
+      <button id="music-toggle" class="btn-icon music-btn" aria-label="Toggle background music" style="display: none;">
+        <span class="music-icon" id="music-icon">🎵</span>
+        <span class="music-waves" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Audio Element (points to assets/music.webm and assets/music.mp3) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/music.webm" type="audio/webm">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Main Multi-Screen Storytelling Container -->
+  <main class="story-viewport" id="story-viewport">
+
+    <!-- ==============================================
+         SCREEN 0: PERSONALIZATION / ENTRY GATE
+         ============================================== -->
+    <section class="screen active" id="screen-0" data-step="0" aria-label="Personalization entry screen">
+      <div class="screen-card entry-card">
+        <div class="card-badge">Personalize the Surprise 💙</div>
+        
+        <div class="visual-wrapper entry-visual">
+          <div class="glow-orb" aria-hidden="true"></div>
+          <div class="entry-hero-frame">
+            <span class="entry-photo-pin" aria-hidden="true">📌</span>
+            <img src="assets/photos/best_friend.jpg" alt="Special memory of Sweetha" class="entry-hero-photo">
+            <div class="entry-hero-caption">
+              <span>A Special Moment ✨</span>
+            </div>
+            <!-- Small floating cloud emblem badge on the corner -->
+            <div class="entry-corner-badge" aria-hidden="true">
+              <img src="assets/character.svg" alt="Cute cloud badge" width="46" height="46">
+            </div>
+          </div>
+        </div>
+
+        <div class="content-group">
+          <h1 class="main-title">For Someone Special ✨</h1>
+          <p class="subtitle">Enter the details of the birthday star to unlock the magic.</p>
+        </div>
+
+        <!-- Name and DOB Input Fields -->
+        <div class="entry-form-group">
+          <div class="input-field-wrapper">
+            <label for="input-name" class="input-label">Birthday Star's Name</label>
+            <div class="input-container">
+              <span class="input-icon">💙</span>
+              <input type="text" id="input-name" class="entry-input" value="Sweetha" placeholder="Enter name..." autocomplete="off">
+            </div>
+          </div>
+          <div class="input-field-wrapper">
+            <label for="input-dob" class="input-label">Date of Birth</label>
+            <div class="input-container">
+              <span class="input-icon">📅</span>
+              <input type="text" id="input-dob" class="entry-input" value="September 20" placeholder="e.g. September 20" autocomplete="off">
+            </div>
+          </div>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary" id="btn-screen-0" aria-label="Unlock the birthday surprise">
+            <span>Unlock the Magic 💙</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 1: WELCOME
+         ============================================== -->
+    <section class="screen" id="screen-1" data-step="1" aria-label="Welcome screen">
+      <div class="screen-card">
+        <div class="card-badge">A Special Surprise</div>
+        
+        <div class="visual-wrapper welcome-visual">
+          <div class="glow-orb" aria-hidden="true"></div>
+          <div class="sparkle-cluster" aria-hidden="true">
+            <span class="sparkle sp-1">✦</span>
+            <span class="sparkle sp-2">✧</span>
+            <span class="sparkle sp-3">✦</span>
+            <span class="sparkle sp-4">✨</span>
+          </div>
+          <div class="cloud-emblem">
+            <img src="assets/character.svg" alt="Cute birthday cloud" class="hero-illustration float-gentle" width="160" height="160">
+          </div>
+          <!-- Mini Romantic Polaroid Photo Badge -->
+          <div class="card-photo-accent photo-accent-welcome" aria-hidden="true">
+            <img src="assets/photos/photo_2.jpg" alt="Sweet memory" class="accent-img">
+            <span class="accent-star">✨</span>
+          </div>
+        </div>
+
+        <div class="content-group">
+          <h2 class="main-title">A Little Surprise</h2>
+          <p class="subtitle">For someone very special, <span class="recipient-name">Sweetha</span>...</p>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary" id="btn-screen-1" aria-label="Start birthday surprise experience">
+            <span>Let's Begin</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 2: BALLOONS
+         ============================================== -->
+    <section class="screen" id="screen-2" data-step="2" aria-label="Balloon surprise screen">
+      <div class="screen-card">
+        <div class="card-badge">Celebration</div>
+
+        <div class="visual-wrapper balloons-visual">
+          <div class="glow-orb" aria-hidden="true"></div>
+          <div class="ambient-balloons" aria-hidden="true">
+            <div class="floating-balloon fb-1"></div>
+            <div class="floating-balloon fb-2"></div>
+            <div class="floating-balloon fb-3"></div>
+          </div>
+          <img src="assets/balloons.svg" alt="Soft sky-blue and white balloons" class="hero-illustration float-sway" width="180" height="220">
+          <!-- Couple Outdoor Photo Floating Alongside Balloons -->
+          <div class="card-photo-accent photo-accent-balloons" aria-hidden="true">
+            <img src="assets/photos/photo_1.jpg" alt="Couple smile" class="accent-img">
+            <span class="accent-badge-tag">💙 Us</span>
+          </div>
+        </div>
+
+        <div class="content-group">
+          <h2 class="main-title">It's your special day, <span class="recipient-name">Sweetha</span> ✨</h2>
+          <p class="subtitle">A sky full of wishes floating just for you.</p>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary" id="btn-screen-2" aria-label="Continue to birthday cake">
+            <span>Continue</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 3: BIRTHDAY CAKE
+         ============================================== -->
+    <section class="screen" id="screen-3" data-step="3" aria-label="Birthday cake screen">
+      <div class="screen-card">
+        <div class="card-badge">Make a Wish</div>
+
+        <div class="visual-wrapper cake-visual">
+          <div class="cake-container" id="cake-container">
+            <div class="wish-burst" id="wish-burst" aria-hidden="true"></div>
+            <img src="assets/cake.svg" alt="Cute birthday cake with glowing candle" class="hero-illustration cake-art" id="cake-art" width="190" height="200">
+          </div>
+          <!-- Sweet Polaroid Photo of Her Smile -->
+          <div class="card-photo-accent photo-accent-cake" aria-hidden="true">
+            <img src="assets/photos/photo_4.jpg" alt="Radiant smile" class="accent-img">
+            <span class="accent-badge-tag">🎂 Sweet</span>
+          </div>
+        </div>
+
+        <div class="content-group">
+          <h2 class="main-title" id="cake-title">A special day deserves something sweet...</h2>
+          <p class="subtitle" id="cake-subtitle">Close your eyes and make a wish, <span class="recipient-name">Sweetha</span>.</p>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary btn-sparkle" id="btn-screen-3" aria-label="Make a wish on the birthday cake">
+            <span class="sparkle-symbol" aria-hidden="true">✨</span>
+            <span id="wish-btn-text">Make a Wish</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 4: FLOWERS
+         ============================================== -->
+    <section class="screen" id="screen-4" data-step="4" aria-label="Birthday flowers screen">
+      <div class="screen-card">
+        <div class="card-badge">For You</div>
+
+        <div class="visual-wrapper flowers-visual">
+          <div class="glow-orb" aria-hidden="true"></div>
+          <div class="petal-drift" aria-hidden="true">
+            <span class="drift-petal dp-1"></span>
+            <span class="drift-petal dp-2"></span>
+            <span class="drift-petal dp-3"></span>
+          </div>
+          <img src="assets/flowers.svg" alt="Elegant white flowers and sky-blue blossoms" class="hero-illustration flower-sway" width="190" height="210">
+          <!-- Joyful Outdoor Photo with Red Dupatta -->
+          <div class="card-photo-accent photo-accent-flowers" aria-hidden="true">
+            <img src="assets/photos/photo_3.jpg" alt="Joyful moments" class="accent-img">
+            <span class="accent-badge-tag">🌸 Radiant</span>
+          </div>
+        </div>
+
+        <div class="content-group">
+          <h2 class="main-title">A little piece of the sky for your special day ☁️</h2>
+          <p class="subtitle">Blooms as pure, calm and radiant as you are.</p>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary" id="btn-screen-4" aria-label="Proceed to letter screen">
+            <span>There's More</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 5: ENVELOPE
+         ============================================== -->
+    <section class="screen" id="screen-5" data-step="5" aria-label="Birthday envelope screen">
+      <div class="screen-card">
+        <div class="card-badge">Personal Note</div>
+
+        <div class="visual-wrapper envelope-visual">
+          <div class="interactive-envelope" id="interactive-envelope">
+            <!-- Back of envelope -->
+            <div class="envelope-pocket">
+              <!-- Slidable preview card emerging upward with cute photo peek -->
+              <div class="envelope-card-peek" id="envelope-card-peek">
+                <div class="card-peek-header">
+                  <span class="peek-dot"></span>
+                  <span class="peek-line"></span>
+                </div>
+                <div class="card-peek-content">
+                  <div class="peek-photo-thumb">
+                    <img src="assets/photos/photo_5.jpg" alt="Playful selfie" class="peek-img">
+                  </div>
+                  <div class="peek-meta">
+                    <p class="peek-text">Dear <span class="recipient-name-peek">Sweetha</span>,</p>
+                    <p class="peek-sub">Happy Birthday... 💙</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Envelope front flaps & seal -->
+              <div class="envelope-flaps">
+                <div class="flap-left"></div>
+                <div class="flap-right"></div>
+                <div class="flap-bottom"></div>
+                <div class="flap-top" id="envelope-flap-top"></div>
+                <div class="wax-seal" id="wax-seal" aria-hidden="true">
+                  <span>💙</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-group">
+          <h2 class="main-title">I wrote something for you...</h2>
+          <p class="subtitle">A few words straight from the heart.</p>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary" id="btn-screen-5" aria-label="Open the birthday letter">
+            <span>Open the Letter 💌</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 6: PERSONAL BIRTHDAY LETTER
+         ============================================== -->
+    <section class="screen" id="screen-6" data-step="6" aria-label="Personal birthday letter screen">
+      <div class="letter-viewport">
+        <article class="letter-card" id="letter-card">
+          <!-- Decorative letter stamp / ribbon -->
+          <div class="letter-header">
+            <div class="postage-stamp" aria-hidden="true">
+              <span class="stamp-inner">☁️ 2026</span>
+            </div>
+            <div class="letter-date" id="letter-date">September 20</div>
+          </div>
+
+          <!-- Handwritten style heading -->
+          <h2 class="letter-title" id="letter-title">Happy Birthday, <span class="recipient-name">Sweetha</span> 💙</h2>
+          <div class="letter-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-icon">✨</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <p class="letter-greeting" id="letter-greeting">Dear <span class="recipient-name">Sweetha</span>,</p>
+
+          <!-- Letter paragraphs populated from config / script -->
+          <div class="letter-body" id="letter-body">
+            <p class="letter-p p-1">
+              Today is your special day, and I wanted to create something quiet and sweet just to remind you how deeply celebrated and appreciated you are.
+            </p>
+            <p class="letter-p p-2">
+              Your presence brings a calm, gentle brightness to everyone around you — just like a clear, cloudless morning sky. Your kindness, your laugh, and the warmth you carry make every ordinary moment feel a little more meaningful.
+            </p>
+            <p class="letter-p p-3">
+              May this new year of your journey be filled with dreams that gently take flight, peaceful moments of genuine happiness, good health, and countless memories that make you smile.
+            </p>
+            <p class="letter-p p-4">
+              Never forget how truly wonderful and rare you are. Happy Birthday! 💙
+            </p>
+          </div>
+
+          <div class="letter-footer">
+            <p class="letter-closing" id="letter-closing">With love & warmest wishes,</p>
+            <p class="letter-signature" id="letter-signature">Always ✨</p>
+          </div>
+        </article>
+
+        <div class="action-group letter-actions">
+          <button class="btn btn-primary" id="btn-screen-6" aria-label="Proceed to memory photos">
+            <span>Our Memories 📸</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 7: OUR MEMORIES 📸 (INTERACTIVE 3D PHOTO STACK)
+         ============================================== -->
+    <section class="screen" id="screen-7" data-step="7" aria-label="Memory photo gallery screen">
+      <div class="screen-card memory-card-screen">
+        <div class="card-badge">Cherished Moments 💙</div>
+
+        <div class="content-group memory-header">
+          <h2 class="main-title">Memories with <span class="recipient-name">Sweetha</span> 📸</h2>
+          <p class="subtitle">Hover or tap to flip through our favorite memories.</p>
+        </div>
+
+        <!-- 3D Interactive Polaroid Photo Stack -->
+        <div class="memory-stack-wrapper">
+          <div class="memory-stack" id="memory-stack">
+            <!-- Photo 1 -->
+            <div class="memory-item active" data-index="0">
+              <div class="polaroid-frame">
+                <div class="polaroid-pin">📌</div>
+                <img src="assets/photos/photo_1.jpg" alt="Smiles as bright as the morning sky" class="polaroid-photo">
+                <div class="polaroid-note">
+                  <span class="note-text">Smiles as bright as the sky ☁️💙</span>
+                </div>
+              </div>
+            </div>
+            <!-- Photo 2 -->
+            <div class="memory-item" data-index="1">
+              <div class="polaroid-frame">
+                <div class="polaroid-pin">📌</div>
+                <img src="assets/photos/photo_2.jpg" alt="Our sweet moments of laughter" class="polaroid-photo">
+                <div class="polaroid-note">
+                  <span class="note-text">Our sweet moments of laughter ✨</span>
+                </div>
+              </div>
+            </div>
+            <!-- Photo 3 -->
+            <div class="memory-item" data-index="2">
+              <div class="polaroid-frame">
+                <div class="polaroid-pin">📌</div>
+                <img src="assets/photos/photo_3.jpg" alt="Pure happiness and playful smiles" class="polaroid-photo">
+                <div class="polaroid-note">
+                  <span class="note-text">Pure happiness & playful smiles 🌸💙</span>
+                </div>
+              </div>
+            </div>
+            <!-- Photo 4 -->
+            <div class="memory-item" data-index="3">
+              <div class="polaroid-frame">
+                <div class="polaroid-pin">📌</div>
+                <img src="assets/photos/photo_4.jpg" alt="Every day is warmer by your side" class="polaroid-photo">
+                <div class="polaroid-note">
+                  <span class="note-text">Every day is warmer by your side ☕💙</span>
+                </div>
+              </div>
+            </div>
+            <!-- Photo 5 -->
+            <div class="memory-item" data-index="4">
+              <div class="polaroid-frame">
+                <div class="polaroid-pin">📌</div>
+                <img src="assets/photos/photo_5.jpg" alt="Goofy, cute and always special" class="polaroid-photo">
+                <div class="polaroid-note">
+                  <span class="note-text">Goofy, cute, and always special 🐶✨</span>
+                </div>
+              </div>
+            </div>
+            <!-- Photo 6 -->
+            <div class="memory-item" data-index="5">
+              <div class="polaroid-frame">
+                <div class="polaroid-pin">📌</div>
+                <img src="assets/photos/best_friend.jpg" alt="The best friend I could ever ask for" class="polaroid-photo">
+                <div class="polaroid-note">
+                  <span class="note-text">The best friend I could ever ask for 💙✨</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stack Navigation Controls -->
+          <div class="stack-controls">
+            <button class="stack-nav-btn" id="memory-prev" aria-label="Previous memory photo">‹</button>
+            <div class="stack-dots" id="memory-dots">
+              <button class="m-dot active" data-mindex="0" aria-label="Photo 1"></button>
+              <button class="m-dot" data-mindex="1" aria-label="Photo 2"></button>
+              <button class="m-dot" data-mindex="2" aria-label="Photo 3"></button>
+              <button class="m-dot" data-mindex="3" aria-label="Photo 4"></button>
+              <button class="m-dot" data-mindex="4" aria-label="Photo 5"></button>
+              <button class="m-dot" data-mindex="5" aria-label="Photo 6"></button>
+            </div>
+            <button class="stack-nav-btn" id="memory-next" aria-label="Next memory photo">›</button>
+          </div>
+        </div>
+
+        <div class="action-group">
+          <button class="btn btn-primary" id="btn-screen-7" aria-label="Continue to final celebration">
+            <span>One Last Celebration 🎉</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 8: FINAL CELEBRATION
+         ============================================== -->
+    <section class="screen" id="screen-8" data-step="8" aria-label="Final celebration screen">
+      <div class="screen-card celebration-card">
+        <div class="card-badge celebratory-badge">Happy Birthday!</div>
+
+        <div class="visual-wrapper final-visual">
+          <div class="glow-orb celebration-glow" aria-hidden="true"></div>
+          <div class="floating-decorations" aria-hidden="true">
+            <span class="float-item fi-1">🎈</span>
+            <span class="float-item fi-2">✨</span>
+            <span class="float-item fi-3">☁️</span>
+            <span class="float-item fi-4">💙</span>
+            <span class="float-item fi-5">🎉</span>
+          </div>
+          <img src="assets/final.svg" alt="Birthday celebration gift box" class="hero-illustration celebration-bounce" width="180" height="180">
+        </div>
+
+        <div class="content-group">
+          <h2 class="main-title celebration-title">HAPPY BIRTHDAY <span class="recipient-name">Sweetha</span> 🎉</h2>
+          <p class="subtitle celebration-subtitle">
+            Hope your day is filled with happiness, smiles and beautiful memories. 💙
+          </p>
+        </div>
+
+        <div class="action-group celebration-actions">
+          <button class="btn btn-primary btn-sparkle" id="btn-screen-8" aria-label="Proceed to best friend message">
+            <span class="sparkle-symbol" aria-hidden="true">💌</span>
+            <span>A Special Message For You</span>
+            <span class="arrow-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 9: BEST FRIEND TRIBUTE (END CARD)
+         ============================================== -->
+    <section class="screen" id="screen-9" data-step="9" aria-label="Best friend tribute screen">
+      <div class="screen-card bestfriend-card">
+        <div class="card-badge bestfriend-badge">Forever & Always 💙</div>
+
+        <div class="visual-wrapper bestfriend-visual">
+          <div class="glow-orb bestfriend-glow" aria-hidden="true"></div>
+          <div class="bestfriend-photo-frame">
+            <span class="bestfriend-photo-pin" aria-hidden="true">📌</span>
+            <img src="assets/photos/best_friend.jpg" alt="Sweetha, best friend forever" class="bestfriend-photo">
+            <div class="bestfriend-photo-caption">
+              <span>Best Friends Forever ✨💙</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-group bestfriend-content">
+          <h2 class="main-title bestfriend-title">To The Best Friend I Could Ever Ask For 💙</h2>
+          <div class="bestfriend-quote-card">
+            <p class="bestfriend-tamil-quote">
+              "Nee enaku kedaicha romba periya gift... en best friend! 💙"
+            </p>
+            <p class="bestfriend-quote">
+              In this entire world, you are the sweetest, kindest and most understanding friend anyone could ever ask for. Thank you for every smile, every laugh, and for standing by my side through everything.
+            </p>
+            <p class="bestfriend-subquote">
+              Wishing you infinite happiness, good health, and dreams coming true, <span class="recipient-name">Sweetha</span>! ✨
+            </p>
+          </div>
+        </div>
+
+        <div class="action-group celebration-actions">
+          <button class="btn btn-secondary" id="btn-replay" aria-label="Replay birthday surprise from start">
+            <span class="btn-icon-symbol" aria-hidden="true">↻</span>
+            <span>Replay</span>
+          </button>
+          <button class="btn btn-primary btn-share" id="btn-share" aria-label="Share this birthday greeting">
+            <span class="btn-icon-symbol" aria-hidden="true">🎁</span>
+            <span>Share</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Minimal Navigation Dots / Progress Indicator -->
+  <nav class="story-progress" aria-label="Story Progress">
+    <div class="progress-track" id="progress-track">
+      <button class="dot active" data-goto="0" aria-label="Go to Name Entry"></button>
+      <button class="dot" data-goto="1" aria-label="Go to Welcome"></button>
+      <button class="dot" data-goto="2" aria-label="Go to Balloons"></button>
+      <button class="dot" data-goto="3" aria-label="Go to Cake"></button>
+      <button class="dot" data-goto="4" aria-label="Go to Flowers"></button>
+      <button class="dot" data-goto="5" aria-label="Go to Envelope"></button>
+      <button class="dot" data-goto="6" aria-label="Go to Letter"></button>
+      <button class="dot" data-goto="7" aria-label="Go to Memories"></button>
+      <button class="dot" data-goto="8" aria-label="Go to Celebration"></button>
+      <button class="dot" data-goto="9" aria-label="Go to Best Friend Message"></button>
+    </div>
+  </nav>
+
+  <!-- Toast Notification (for Link Copied / Messages) -->
+  <div class="toast-notification" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon">💙</span>
+    <span class="toast-message" id="toast-text">Link copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
